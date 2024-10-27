@@ -15,11 +15,11 @@ const NavPanel: React.FC = () => {
           },
         }}
       >
+        <ToggleThemeButton />
         <NavButton label="Home" />
         <NavButton label="Features" />
         <NavButton label="Pricing" />
         <NavButton label="Contact" />
-        <ToggleThemeButton />
       </Box>
     </>
   );
