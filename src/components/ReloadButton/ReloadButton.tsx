@@ -1,5 +1,5 @@
 import { Button } from '@mui/material';
-import { motion } from 'framer-motion';
+import AnimatedBox from '../AnimatedBox/AnimatedBox';
 
 const ReloadButton: React.FC = () => {
   const handleReload = () => {
@@ -7,7 +7,7 @@ const ReloadButton: React.FC = () => {
   };
   return (
     <>
-      <motion.div
+      <AnimatedBox
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 0.8, scale: 1 }}
         transition={{ delay: 2, duration: 2, ease: 'easeOut' }} // Затримка та плавна анімація 
@@ -20,7 +20,7 @@ const ReloadButton: React.FC = () => {
         >
           Reload Page
         </Button>
-      </motion.div>
+      </AnimatedBox>
     </>
   );
 };
