@@ -12,6 +12,7 @@ const HeroPage: React.FC = () => {
       transition={{ duration: 3, ease: 'easeInOut' }} // Довший час для фону
       sx={{
         position: 'relative',
+        width: '90vw',
         backgroundImage: `url(${backgroundImage})`,
         backgroundPosition: 'center',
         backgroundSize: 'cover',

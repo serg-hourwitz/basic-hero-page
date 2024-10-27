@@ -1,4 +1,5 @@
 import NavButton from '../NavButton/NavButton';
+import ToggleThemeButton from '../ToggleThemeButton/ToggleThemeButton';
 import { Box } from '@mui/material';
 
 const NavPanel: React.FC = () => {
@@ -9,7 +10,7 @@ const NavPanel: React.FC = () => {
           display: 'flex',
           justifyContent: 'space-around',
           flexWrap: 'wrap',
-          '@media (max-width: 820px)': {
+          '@media (max-width: 900px)': {
             width: '100vw', 
           },
         }}
@@ -18,6 +19,7 @@ const NavPanel: React.FC = () => {
         <NavButton label="Features" />
         <NavButton label="Pricing" />
         <NavButton label="Contact" />
+        <ToggleThemeButton />
       </Box>
     </>
   );

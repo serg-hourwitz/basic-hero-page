@@ -26,6 +26,7 @@ const Navbar: React.FC = () => {
         <Search />
 
         <NavPanel />
+
       </Toolbar>
     </>
   );
