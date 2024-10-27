@@ -3,7 +3,13 @@ import { Box, TextField } from '@mui/material';
 const Search = () => {
   return (
     <>
-      <Box sx={{ flexGrow: 1, display: 'flex', justifyContent: 'center' }}>
+      <Box
+        sx={{
+          flexGrow: 1,
+          display: 'flex',
+          justifyContent: 'center',
+        }}
+      >
         <TextField
           id="outlined-search"
           label="Search field"
@@ -11,6 +17,9 @@ const Search = () => {
           variant="outlined"
           sx={{
             width: '80%',
+            '@media (max-width: 500px)': {
+              width: '100%',
+            },
             '& .MuiInputLabel-root': {
               color: '#452121', // Колір мітки
               fontWeight: '400',
