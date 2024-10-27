@@ -3,8 +3,9 @@ import ReloadButton from '../ReloadButton/ReloadButton';
 import AnimatedBox from '../AnimatedBox/AnimatedBox';
 import { Container } from '@mui/material';
 
-const PageContainer: React.FC = () => {
-  
+const PageContainer: React.FC<{ setIsHovered: (hovered: boolean) => void }> = ({
+  setIsHovered,
+}) => {
   return (
     <>
       <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 2 }}>
@@ -12,7 +13,7 @@ const PageContainer: React.FC = () => {
         <AnimatedBox
           initial={{ opacity: 0, x: '-100vw' }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: 0.8, duration: 2, ease: 'easeOut' }} // Довша і більш плавна анімація
+          transition={{ delay: 0.8, duration: 2, ease: 'easeOut' }}
         >
           <Text
             variant="h1"
@@ -26,7 +27,7 @@ const PageContainer: React.FC = () => {
         <AnimatedBox
           initial={{ opacity: 0, x: '100vw' }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: 0.8, duration: 2, ease: 'easeOut' }} // Затримка та довша тривалість
+          transition={{ delay: 0.8, duration: 2, ease: 'easeOut' }}
         >
           <Text
             variant="h5"
@@ -35,7 +36,7 @@ const PageContainer: React.FC = () => {
           />
         </AnimatedBox>
 
-        <ReloadButton />
+        <ReloadButton setIsHovered={setIsHovered} />
       </Container>
     </>
   );
