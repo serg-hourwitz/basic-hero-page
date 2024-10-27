@@ -14,7 +14,7 @@ const NavButton: React.FC<NavButtonProps> = ({ label, onClick }) => {
         transition: '0.8s',
         fontFamily: 'Montserrat',
         '&:hover': {
-          color: '#3f51b5', // Зміна кольору при наведенні
+          color: '#3f51b5', 
         },
       }}
       onClick={onClick}

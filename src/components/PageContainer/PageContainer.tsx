@@ -1,11 +1,10 @@
 import Text from '../Text/Text';
-import { Button, Container } from '@mui/material';
+import ReloadButton from '../ReloadButton/ReloadButton';
+import { Container } from '@mui/material';
 import { motion } from 'framer-motion';
 
 const PageContainer: React.FC = () => {
-  const handleReload = () => {
-    window.location.reload();
-  };
+  
   return (
     <>
       <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 2 }}>
@@ -36,21 +35,7 @@ const PageContainer: React.FC = () => {
           />
         </motion.div>
 
-        {/* Кнопка */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1.2 }}
-          transition={{ delay: 2, duration: 2, ease: 'easeOut' }} // Затримка та плавна анімація для кнопки
-        >
-          <Button
-            variant="contained"
-            color="primary"
-            sx={{ marginTop: 20, fontWeight: 'bold', fontFamily: 'Montserrat' }}
-            onClick={handleReload}
-          >
-            Reload Page
-          </Button>
-        </motion.div>
+        <ReloadButton />
       </Container>
     </>
   );

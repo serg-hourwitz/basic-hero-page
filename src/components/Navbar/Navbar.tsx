@@ -17,6 +17,8 @@ const Navbar: React.FC = () => {
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'center',
+          flexWrap: 'wrap',
+          gap: '10px',
         }}
       >
         <Logo />

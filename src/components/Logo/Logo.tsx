@@ -6,9 +6,9 @@ const Logo: React.FC = () => {
     <>
       <Box
         component="img"
-        src={logoImg} // Змініть на шлях до вашого логотипу
+        src={logoImg} 
         alt="Logo"
-        sx={{ height: 60 }} // Висота логотипу
+        sx={{ height: 60 }} 
       />
     </>
   );
